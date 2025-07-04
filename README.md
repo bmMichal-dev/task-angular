@@ -1,5 +1,24 @@
-# AngularTask
+## Getting Started
 
+Before you start, please install globally on your computer: [Git](https://git-scm.com/downloads), [Node.js](https://nodejs.org/en), and [Angular CLI](https://github.com/angular/angular-cli).
+
+To get a local copy of this repository and install all dependencies, follow these steps:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/bmMichal-dev/task-angular.git
+   ```
+2. **Navigate to the project folder:**
+   ```bash
+   cd task-angular
+   ```
+
+3. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+# Next steps
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.5.
 
 ## Development server
