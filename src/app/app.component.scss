@@ -1,0 +1,36 @@
+@use "../shared/styles/mixins" as mixins;
+
+$navbar-height: 77px;
+
+.app {
+  background-image: image-set(
+    url("https://cdn.prod.website-files.com/5efc5b335517018861ccc970/68406d92a89ce1d885f75c3c_home-hero-bg-image-p-500.png")
+      1x,
+    url("https://cdn.prod.website-files.com/5efc5b335517018861ccc970/68406d92a89ce1d885f75c3c_home-hero-bg-image-p-800.png")
+      1.5x,
+    url("https://cdn.prod.website-files.com/5efc5b335517018861ccc970/68406d92a89ce1d885f75c3c_home-hero-bg-image-p-1080.png")
+      2x,
+    url("https://cdn.prod.website-files.com/5efc5b335517018861ccc970/68406d92a89ce1d885f75c3c_home-hero-bg-image.png")
+      3x
+  );
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: auto;
+  height: calc(100vh - #{$navbar-height});
+  margin-top: $navbar-height;
+
+  &__navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    height: $navbar-height;
+  }
+
+  &__wrapper {
+    @include mixins.centerContentWithMaxWidth(600px);
+    padding: 50px 20px;
+  }
+}

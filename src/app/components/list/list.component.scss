@@ -1,0 +1,12 @@
+@use "@angular/material" as mat;
+
+.list {
+  &__element {
+    margin-bottom: 40px;
+    display: block;
+  }
+
+  &__placeholder-header {
+    padding: 40px;
+  }
+}

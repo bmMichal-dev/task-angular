@@ -1,0 +1,17 @@
+<div class="list">
+  @if (list().length === 0) {
+    <mat-card appearance="outlined">
+      <mat-card-header class="list__placeholder-header">
+        <mat-card-title>No questions added</mat-card-title>
+      </mat-card-header>
+    </mat-card>
+  } @else {
+    @for (element of list(); track element) {
+      <app-list-element
+        class="list__element"
+        [listElement]="element"
+        (save)="onSave($event)"
+      ></app-list-element>
+    }
+  }
+</div>

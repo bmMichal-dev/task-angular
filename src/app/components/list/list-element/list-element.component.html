@@ -1,0 +1,44 @@
+<mat-card
+  appearance="outlined"
+  class="list-element"
+  [class.list-element--answered]="isAnswered"
+>
+  <mat-card-header>
+    <mat-card-title>{{ listElement().title }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    @switch (listElement().type) {
+      @case (questionType.text) {
+        <mat-form-field>
+          <mat-label>Answer</mat-label>
+          <input
+            matInput
+            placeholder="Write your answer"
+            [formControl]="answerFormControl"
+            required
+          />
+        </mat-form-field>
+      }
+      @default {
+        <mat-radio-group
+          aria-label="Select an answer"
+          [formControl]="answerFormControl"
+        >
+          <mat-radio-button value="true">Yes</mat-radio-button>
+          <mat-radio-button value="false">No</mat-radio-button>
+        </mat-radio-group>
+      }
+    }
+  </mat-card-content>
+  @if (!isAnswered) {
+    <mat-card-actions align="end">
+      <button
+        matButton="elevated"
+        (click)="onSave()"
+        [disabled]="!answerFormControl.valid"
+      >
+        Save
+      </button>
+    </mat-card-actions>
+  }
+</mat-card>

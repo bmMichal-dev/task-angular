@@ -1,0 +1,37 @@
+@use "../vars" as vars;
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+html {
+  height: 100%;
+  color-scheme: light;
+
+  // card-body
+  --mat-card-outlined-container-color: #f3efffbf;
+  --mat-card-outlined-container-shape: 8px;
+  --mat-card-outlined-outline-width: 0;
+  --mat-card-outlined-outline-color: none;
+  --mat-card-outlined-container-elevation: none;
+
+  // card-header
+  --mat-card-title-text-line-height: 3rem;
+  --mat-card-title-text-size: 2.5rem;
+  --mat-card-title-text-tracking: -0.02px;
+  --mat-card-title-text-weight: 300;
+
+  // inputs
+  --mat-form-field-filled-container-color: transparent;
+  --mat-sys-hover-state-layer-opacity: 0;
+
+  // stepper
+  --mat-stepper-container-color: transparent;
+  --mat-stepper-header-selected-state-icon-background-color: #ff9f59;
+  --mat-stepper-header-edit-state-icon-background-color: #46d39a;
+
+  // buttons
+  --mat-button-protected-container-color: #46d39a;
+  --mat-button-protected-label-text-color: white;
+}

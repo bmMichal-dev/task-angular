@@ -1,0 +1,52 @@
+<div class="create">
+  <mat-card appearance="outlined">
+    <mat-card-header>
+      <mat-card-title>Add new question</mat-card-title>
+    </mat-card-header>
+
+    <mat-stepper orientation="vertical" [linear]="true" #stepper>
+      <mat-step [stepControl]="getStepAsFormGroup('firstStep')">
+        <form [formGroup]="getStepAsFormGroup('firstStep')">
+          <ng-template matStepLabel>Choose type of question</ng-template>
+          <mat-form-field>
+            <mat-label>Choose type of question</mat-label>
+            <select matNativeControl required formControlName="type">
+              <option [value]="listType.yesNo">Yes/No</option>
+              <option [value]="listType.text">Text</option>
+            </select>
+          </mat-form-field>
+          <div>
+            <button matButton matStepperPrevious>Back</button>
+            <button matButton matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="getStepAsFormGroup('secondStep')">
+        <form [formGroup]="getStepAsFormGroup('secondStep')">
+          <ng-template matStepLabel>Provide question</ng-template>
+          <mat-form-field>
+            <mat-label>Question</mat-label>
+            <input
+              matInput
+              placeholder="e.g. What is your favorite animal?"
+              formControlName="title"
+              required
+            />
+          </mat-form-field>
+          <div>
+            <button matButton matStepperPrevious>Back</button>
+            <button matButton matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Save a question</ng-template>
+        <p>Everything is good? Now you can save it!</p>
+        <div class="create__buttons">
+          <button matButton matStepperPrevious>Back</button>
+          <button matButton="elevated" (click)="save()">Save</button>
+        </div>
+      </mat-step>
+    </mat-stepper>
+  </mat-card>
+</div>

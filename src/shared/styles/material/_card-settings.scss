@@ -1,0 +1,20 @@
+@use "sass:math" as math;
+
+$padding: 24px;
+
+mat-card-header.mat-mdc-card-header {
+  padding: $padding $padding 0;
+}
+
+mat-card-content.mat-mdc-card-content {
+  padding: $padding;
+}
+
+mat-card-actions.mat-mdc-card-actions {
+  gap: 10px;
+  padding: 0 math.div($padding, 2) math.div($padding, 2);
+}
+
+mat-form-field {
+  width: 100%;
+}

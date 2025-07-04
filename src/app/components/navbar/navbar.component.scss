@@ -1,0 +1,26 @@
+@use "../../../shared/styles/mixins" as mixins;
+
+.navbar {
+  background-color: #fff;
+
+  &__container {
+    @include mixins.centerContentWithMaxWidth;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    z-index: 1;
+  }
+
+  &__logo {
+    vertical-align: middle;
+    max-width: 100%;
+    display: inline-block;
+  }
+
+  &__left-side {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}

@@ -1,0 +1,6 @@
+@use "vars" as vars;
+
+@mixin centerContentWithMaxWidth($width: vars.$page-content-max-width) {
+  max-width: $width;
+  margin: 0 auto;
+}
